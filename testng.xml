@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests">
+	<listeners>
+		<listener class-name="com.qa.Listeners.TestListeners" />
+	</listeners>
+	<test name="Android Test" preserve-order="true">
+		<parameter name="platformName" value="Android" />
+		<parameter name="platformVersion" value="10" />
+		<parameter name="deviceName" value="OnePlus 6T" />
+		<parameter name="systemPort" value="10000" />
+		<classes>
+			<class name="com.qa.TestCases.LoginTest">
+			<methods>
+				<include name="tc_ValidUserLogin"/>
+			</methods>
+			</class>
+		</classes>
+	</test>
+<!-- 	<test name="iOS Test-iPhone 11 pro Max" preserve-order="true">
+		<parameter name="platformName" value="IOS" />
+		<parameter name="platformVersion" value="13.3" />
+		<parameter name="deviceName" value="iPhone 11 Pro Max" />
+		<parameter name="wdaLocalPort" value="10001" />
+		<classes>
+			<class name="com.qa.TestCases.LoginTest" />
+		</classes>
+	</test> -->
+<!-- 	<test name="iOS Test-iPhone 11 Pro" preserve-order="true"
+		parallel="false">
+		<parameter name="platformName" value="IOS" />
+		<parameter name="platformVersion" value="13.3" />
+		<parameter name="deviceName" value="iPhone 11 Pro" />
+		<parameter name="wdaLocalPort" value="10002" />
+		<classes>
+			<class name="com.qa.TestCases.LoginTest" />
+		</classes>
+	</test> -->
+</suite> 
